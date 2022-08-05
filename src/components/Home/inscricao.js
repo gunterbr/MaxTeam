@@ -28,8 +28,8 @@ export default function Inscricao() {
             method: 'POST',
             body: formData
         })
-            .then((res) => {
-                document.getElementById('msg-err-new').innerHTML = res.message
+            .then((data) => {
+                document.getElementById('msg-err-new').innerHTML = data
             })
             .catch((err) => {
                 document.getElementById('msg-err-new').innerHTML = err
