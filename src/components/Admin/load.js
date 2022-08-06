@@ -20,6 +20,7 @@ const Load = () => {
           key={val.idinscricao}
           id={val.idinscricao}
           candidato={val.nomeCandidato}
+          contato={val.contato}
           inscricao={val.numeroInscricao}
           evento={val.evento}
           deferida={val.deferida}

@@ -51,9 +51,10 @@ export default function Card(props) {
       <div>
 
         <span>Candidato: {props.candidato}</span>
+        <span>Contato: {props.contato}</span>
         <span>Inscrição: {props.inscricao}</span>
         <span>Evento: {props.evento}</span>
-        <img default-src='none' src={`${BASE_URL}`+props.file} alt={props.originalname}></img>
+        <img default-src='none' src={`${BASE_URL}`+props.file} alt={props.originalname} className="img-thumbnail" width="304" height="236"></img>
         <span>{isDeferida}</span>
 
         <form onSubmit={handleConfirm}>
