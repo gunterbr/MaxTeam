@@ -23,8 +23,7 @@ const Load = () => {
           inscricao={val.numeroInscricao}
           evento={val.evento}
           deferida={val.deferida}
-          folder={val.destination}
-          file={val.filename}
+          file={val.path}
           originalname={val.originalname}
         />
       ))}
