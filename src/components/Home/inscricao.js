@@ -1,6 +1,9 @@
 import React from 'react'
+import Axios from 'axios'
 
 export default function Inscricao() {
+
+    const BASE_URL = 'https://maxteam-mysql.herokuapp.com/'
 
     function numeroInscricao() {
         const novoNumero = Math.floor(Math.random() * 100 + 1)
@@ -24,15 +27,14 @@ export default function Inscricao() {
                 formData.append('files', pagamento.files[i])
         }
 
-        fetch('https://maxteam-mysql.herokuapp.com/upload', {
-            method: 'POST',
-            body: formData
-        })
-            .then((data) => {
-                document.getElementById('msg-err-new').innerHTML = data
+        Axios.post(`${BASE_URL}inscricao`, formData)
+            .then(function (response) {
+                document.getElementById('msg-err-new').innerHTML = response.data
+                console.log(response.data)
             })
-            .catch((err) => {
-                document.getElementById('msg-err-new').innerHTML = err
+            .catch(function (response) {
+                document.getElementById('msg-err-new').innerHTML = response.message
+                console.log(response)
             })
     }
 
