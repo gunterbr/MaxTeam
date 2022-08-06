@@ -59,13 +59,6 @@ export default function Inscricao() {
                 </span>
                 <span>
                     <i className="bi bi-whatsapp"></i>
-                    <input type='tel' name='contato' id='contato' placeholder='(00) 90000-0000 ' maxLength='14' required
-                        onKeyPress={(event) => {
-                            if (!/[0-9]/.test(event.key)) {
-                              event.preventDefault()
-                            }
-                        }}
-                    />
                     <Phone />
                 </span>
                 <span>
