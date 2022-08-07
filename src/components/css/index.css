@@ -5,13 +5,14 @@
   }
 
   #home {
+    position: relative;
     display: block;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    height: 100vh;
+    padding: 0 50px;
     min-width: 400px;
     max-width: 500px;
-    height: 100%;
     overflow-y: auto;
   }
 
@@ -22,16 +23,21 @@
       align-items: center;
       height: auto;
     }
+
+    #home {
+      padding: 50px;
+    }
   }
 
   #instrucoes {
     display: block;
     flex-direction: column;
     justify-content: center;
+    height: 100vh;
     padding: 50px;
     min-width: 400px;
     max-width: 500px;
-    background-color: #f6f6f6;
+    background-color: #2C3E50;
   }
 
   .justify {
@@ -40,18 +46,36 @@
     padding: 10px 0;
   }
 
+  .acesso-restrito {
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+
+  .instrutor {
+    line-height: 1;
+  }
+
+  h1 {
+    color: #2C3E50;
+  }
+
+  h5 {
+    line-height: 1.2;
+    color: #D98880;
+  }
+
+  h2, h3, h6 {
+    text-align: center;
+    color: #F2F3F4;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+
   .eventTitle {
     text-align: center;
-  }
-  
-  h2 {
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    display:inline-block;
-    margin: 40px 8px 10px 8px; 
-    color: #cccccc;
   }
   
   /* STRUCTURE */
@@ -62,8 +86,6 @@
     flex-direction: column; 
     justify-content: center;
     width: 100%;
-    min-height: 100%;
-    padding: 25px 0 0 0;
   }
 
   form > span {
@@ -71,6 +93,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+
+  form.login {
+    padding: 25px 0 0 0;
   }
   
   .modal-footer {
@@ -168,4 +194,8 @@
   
   #icon {
     width:60%;
+  }
+
+  .btn {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
   }

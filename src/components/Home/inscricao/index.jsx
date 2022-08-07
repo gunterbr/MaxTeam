@@ -6,6 +6,8 @@ import { Button } from 'react-bootstrap'
 import Phone from './phone'
 
 export default function Inscricao() {
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false)
+    const [isAlert, setAlert] = useState('')
 
     const BASE_URL = 'https://maxteam-mysql.herokuapp.com/'
 
@@ -16,7 +18,8 @@ export default function Inscricao() {
 
     function submitForm(e) {
         e.preventDefault()
-        document.getElementById('msg-err-new').innerHTML = 'Por favor, aguarde ...'
+        setIsButtonDisabled(true)
+        document.getElementById('alert').innerHTML = 'Por favor, aguarde ...'
 
         const nomeCandidato = document.getElementById('nomeCandidato')
         const contato = document.getElementById('contato')
@@ -35,22 +38,24 @@ export default function Inscricao() {
 
         Axios.post(`${BASE_URL}inscricao`, formData)
             .then(function (response) {
-                document.getElementById('msg-err-new').innerHTML = response.data
+                setAlert(response.data.status)
+                document.getElementById('alert').innerHTML = response.data.msg
                 console.log(response.data)
             })
             .catch(function (response) {
-                document.getElementById('msg-err-new').innerHTML = response.message
+                setAlert('err')
+                document.getElementById('alert').innerHTML = response.message
                 console.log(response)
             })
     }
 
   return (
-        <div>
+        <>
             <div className='justify eventTitle'>
-                <h1>MaxTeam Extreme Games 2022</h1>
+                <h1>MaxTeam Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>
             </div>
             <div className='justify eventTitle'>
-                <h6>Por favor, leia as intruções antes de realizar sua inscrição!</h6>
+                <h5>Por favor, leia as intruções antes de realizar sua inscrição!</h5>
             </div>
             <form id='form' onSubmit={submitForm} encType='multipart/form-data'>
                 <span>
@@ -72,10 +77,13 @@ export default function Inscricao() {
                     <i className="bi bi-file-image"></i>
                     <input type='file' id='pagamento' multiple required />
                 </span>
-                <Button as='input' type="submit" value='Confirmar'/>
-                <span id='msg-err-new'></span>
+                <span id='alert' className={'alert alert-'+isAlert}></span>
+                <span>
+                    <Button as='input' type="submit" value='Confirmar' disabled={isButtonDisabled}/>
+                </span>
+                
             
             </form>
-        </div>
+        </>
   )
 }

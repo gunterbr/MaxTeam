@@ -4,7 +4,7 @@ import { useHistory } from 'react-router'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Modal, Button} from 'react-bootstrap'
-import '../css/index.css'
+import '../../css/index.css'
 
 const Login = () => {
 
@@ -42,7 +42,7 @@ const Login = () => {
 
     return (
         <>
-            <div className='justify'>
+            <div className='justify acesso-restrito'>
                 <button className="btn btn-secondary" onClick={handleShow}>
                 <i className="bi bi-lock-fill"></i>
             </button>
@@ -53,9 +53,16 @@ const Login = () => {
                 <Modal.Title>Acesso Restrito</Modal.Title>
                 </Modal.Header>
 
-                <form onSubmit={fazerLogin}>
-                    <input type='text' onChange={inputChange} name='username' id='username' placeholder="Login" required />
-                    <input type='password' onChange={inputChange} name='password' id='senha' placeholder="Senha" required />
+                <form className='login' onSubmit={fazerLogin}>
+                    <span>
+                        <i className="bi bi-person"></i>
+                        <input type='text' onChange={inputChange} name='username' id='username' placeholder="Login" required />
+                    </span>
+                    <span>
+                        <i className="bi bi-lock-fill"></i>
+                        <input type='password' onChange={inputChange} name='password' id='senha' placeholder="Senha" required />
+                    </span>
+                    
                 <span id='msg-err-login'></span>
 
                 <Modal.Footer>

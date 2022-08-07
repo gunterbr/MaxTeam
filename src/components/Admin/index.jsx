@@ -10,13 +10,28 @@ const Admin = () => {
     
     return (
         <>
-            <img src={Logo} alt="Logo" />
-            <button onClick={() => {
-                localStorage.clear()
-                history.push('/home')
-            }}>Log out</button>
+            <div id='container'>
+            <div id='home'>
+                <div className='justify'>
+                    <img src={Logo} alt='Logo MaxTeam' />
+                </div>
+                
+                <div className='justify acesso-restrito'>
+                    <button className='btn btn-secondary' onClick={() => {
+                            localStorage.clear()
+                            history.push('/home')
+                        }}>
+                    <i className='bi bi-box-arrow-left'></i>
+                    </button>
+                </div>
 
-            <Load />
+                <Load />
+
+            </div>
+            </div>
+            
+
+            
         </>
     )
 }
