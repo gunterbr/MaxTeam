@@ -22,14 +22,22 @@ export default function Inscricao() {
         document.getElementById('alert').innerHTML = 'Por favor, aguarde ...'
 
         const nomeCandidato = document.getElementById('nomeCandidato')
+        const nascimento = document.getElementById('nascimento')
         const contato = document.getElementById('contato')
         const evento = document.getElementById('evento')
+        const camiseta = document.getElementById('camiseta')
+        const sexo = document.getElementById('sexo')
+        const categoria = document.getElementById('categoria')
         const pagamento = document.getElementById('pagamento')
 
         const formData = new FormData()
         formData.append('nomeCandidato', nomeCandidato.value)
+        formData.append('nascimento', nascimento.value)
         formData.append('contato', contato.value)
         formData.append('evento', evento.value)
+        formData.append('camiseta', camiseta.value)
+        formData.append('sexo', sexo.value)
+        formData.append('categoria', categoria.value)
         formData.append('numeroInscricao', numeroInscricao())
 
         for(let i = 0; i < pagamento.files.length; i++) {
@@ -55,29 +63,62 @@ export default function Inscricao() {
                 <h1>MaxTeam Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>
             </div>
             <div className='justify eventTitle'>
-                <h5>Por favor, leia as intruções antes de realizar sua inscrição!</h5>
+                <h5>Leia as intruções antes de realizar sua inscrição!*</h5>
             </div>
             <form id='form' onSubmit={submitForm} encType='multipart/form-data'>
-                <span>
+                <span className='full'>
                     <i className="bi bi-person"></i>
                     <input type='text' name='nomeCandidato' id='nomeCandidato' placeholder='Nome completo' required />
                 </span>
-                <span>
+                <label htmlFor='nascimento'>Data de nascimento:</label>
+                <span className='full'>
+                    <i className="bi bi-clock-history"></i>
+                    <input type='date' name='nascimento' id='nascimento' required />
+                </span>
+                <span className='full'>
                     <i className="bi bi-whatsapp"></i>
                     <Phone />
                 </span>
-                <span>
+                <span className='full'>
                     <i className="bi bi-calendar4-event"></i>
                     <select id='evento' name='evento' required >
                         <option value=''>Evento:</option>
                         <option value='MaxTeam Extreme Games 2022'>MaxTeam Extreme Games 2022</option>
                     </select>
                 </span>
-                <span>
+                <span className='resp50 marginR5'>
+                    <i className="bi bi-sort-up-alt"></i>
+                    <select id='camiseta' name='camiseta' required >
+                        <option value=''>Camiseta:</option>
+                        <option value='P'>P</option>
+                        <option value='M'>M</option>
+                        <option value='G'>G</option>
+                    </select>
+                </span>
+                <span className='resp50'>
+                    <i className="bi bi-gender-ambiguous"></i>
+                    <select id='sexo' name='sexo' required >
+                        <option value=''>Sexo:</option>
+                        <option value='P'>F</option>
+                        <option value='M'>M</option>
+                    </select>
+                </span>
+                <span className='full'>
+                    <i className="bi bi-tags-fill"></i>
+                    <select id='categoria' name='categoria' required >
+                        <option value=''>Categoria:</option>
+                        <option value='Iniciante'>Iniciante</option>
+                        <option value='Intermediario'>Intermediario</option>
+                        <option value='Master'>Master</option>
+                        <option value='Elite'>Elite</option>
+                    </select>
+                </span>
+                <label htmlFor='file'>Comprovante de pagamento:</label>
+                <span className='full'>
                     <i className="bi bi-file-image"></i>
                     <input type='file' id='pagamento' multiple required />
                 </span>
-                <span id='alert' className={'alert alert-'+isAlert}></span>
+                <span id='alert' className={'full alert alert-'+isAlert}></span>
                 <span>
                     <Button as='input' type="submit" value='Confirmar' disabled={isButtonDisabled}/>
                 </span>

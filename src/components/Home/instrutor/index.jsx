@@ -9,13 +9,13 @@ const Instrutor = () => {
         <>
             <div className='instrutor'>
                 <h2>
-                    OLÁ. SEJA BEM-VINDO(A).
+                    Olá. Seja bem-vindo(a).
                 </h2>
-                <br/>
+                    <br/>
                 <h3>
                     Antes de realizar sua inscrição, fique atento às instruções:
                 </h3>
-                <br/>
+                    <br/>
                 <h5>
                     1) Todos os campos são obrigatórios;
                 </h5>
@@ -31,14 +31,31 @@ const Instrutor = () => {
                 <h5>
                     4) Vamos receber sua inscrição e no prazo de 24h enviaremos a confirmação no telefone cadastrado.
                 </h5>
-                <br/>
+                    <br/><br/>
                 <h6>
-                    PRAZO DE INSCRIÇÃO DO EVENTO:<br/>10 a 15 de agosto/2022.
-                    <br/>
-                    <br/>
-                    Nos vemos em breve &#128075;
+                    PRAZO DE INSCRIÇÃO DO EVENTO:<br/>10 a 25 de agosto/2022, às 18h.
                 </h6>
-
+                    <br/>
+                <h5 className='textCenter'>
+                PIX (CPF)
+                    <br/>
+                02197579258
+                    <br/>
+                BANCO DO BRASIL
+                    <br/>
+                Ag: 3783-4 | C/c: 22498-7
+                    <br/>
+                Maxuel Alencar Barros
+                </h5>
+                    <br/>
+                    <br/>
+                <h6>
+                    &copy; JosielDesign
+                        <br/>
+                    FullStack Web Developer
+                        <br/>
+                    (95) 98802-8564
+                </h6>
             </div>
         </>
     )

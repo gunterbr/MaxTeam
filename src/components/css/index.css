@@ -1,7 +1,12 @@
+  body {
+    background-color: #F8F9F9;
+  }
+
   #container {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    width: 80%;
+    margin: auto;
   }
 
   #home {
@@ -9,14 +14,26 @@
     display: block;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    padding: 0 50px;
-    min-width: 400px;
-    max-width: 500px;
+    padding: 50px;
+    min-width: 700px;
+    max-width: 100%;
     overflow-y: auto;
+    background-color: #FFF;
   }
 
-  @media (max-width: 1000px)
+  #instrucoes {
+    position: relative;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    min-width: 400px;
+    max-width: 100%;
+    overflow-y: auto;
+    background-color: #2C3E50;
+  }
+
+  @media (max-width: 1200px)
   {
     #container {
       flex-direction: column;
@@ -24,20 +41,17 @@
       height: auto;
     }
 
-    #home {
-      padding: 50px;
+    #home, #instrucoes {
+      min-height: 100vh;
+      min-width: 100%;
     }
   }
 
-  #instrucoes {
-    display: block;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    padding: 50px;
-    min-width: 400px;
-    max-width: 500px;
-    background-color: #2C3E50;
+  @media (max-width: 800px)
+  {
+    #container {
+      width: 100%;
+    }
   }
 
   .justify {
@@ -54,6 +68,10 @@
 
   .instrutor {
     line-height: 1;
+  }
+
+  .textCenter {
+    text-align: center;
   }
 
   h1 {
@@ -83,16 +101,45 @@
   form {
     display: flex;
     align-items: center;
-    flex-direction: column; 
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
   }
 
-  form > span {
+  .formColumn {
+    flex-direction: column;
+  }
+
+  form > span.full {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+  }
+
+  form > span.resp50 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 5px);
+  }
+
+  form.adminSet {
+    display: contents;
+    width: 100px;
+  }
+
+  .marginR5 {
+    margin-right: 10px;
+  }
+
+  form > span {
+    position: relative;
+  }
+
+  form > span > i {
+    left: 10px;
+    position: absolute;
   }
 
   form.login {
@@ -145,11 +192,11 @@
     transition: all 0.3s ease-in-out;
   }
   
-  input[type=button]:hover, input[type=text]:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=file]:hover, select:hover, input[type=tel]:hover  {
+  input[type=button]:hover, input[type=text]:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=file]:hover, select:hover, input[type=tel]:hover, input[type=date]:hover  {
     background-color: #B1CDE0;
   }
   
-  input[type=button]:active, input[type=submit]:active, input[type=reset]:active, input[type=file]:active, input[type=tel]:active  {
+  input[type=button]:active, input[type=submit]:active, input[type=reset]:active, input[type=file]:active, input[type=tel]:active, input[type=date]:active  {
     -moz-transform: scale(0.95);
     -webkit-transform: scale(0.95);
     -o-transform: scale(0.95);
@@ -157,7 +204,7 @@
     transform: scale(0.95);
   }
   
-  input[type=text], input[type=password], input[type=file], select, input[type=tel] {
+  input[type=text], input[type=password], input[type=file], select, input[type=tel], input[type=date] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -166,8 +213,8 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 5px;
-    width: 85%;
+    margin: 5px 0;
+    width: 100%;
     border: 2px solid #f6f6f6;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -178,12 +225,12 @@
     border-radius: 5px 5px 5px 5px;
   }
   
-  input[type=text]:focus, input[type=password]:focus, input[type=file]:focus, select:focus, input[type=tel]:focus {
+  input[type=text]:focus, input[type=password]:focus, input[type=file]:focus, select:focus, input[type=tel]:focus, input[type=date]:focus {
     background-color: #fff;
     border-bottom: 2px solid #5fbae9;
   }
   
-  input[type=text]:placeholder, input[type=password]:placeholder, input[type=tel]:placeholder {
+  input[type=text]:placeholder, input[type=password]:placeholder, input[type=tel]:placeholder, input[type=date]:placeholder {
     color: #cccccc;
   }
 
@@ -198,4 +245,8 @@
 
   .btn {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+
+  .img-thumbnail {
+    margin: auto;
   }

@@ -27,7 +27,7 @@ const Login = () => {
 
     const fazerLogin = (e) => {
         e.preventDefault()
-        document.getElementById('msg-err-login').innerHTML = 'check'
+        document.getElementById('msg-err-login').innerHTML = 'Autenticando...'
         
         Axios.post(`${BASE_URL}login`, body)
             .then(({ data }) => {
@@ -53,7 +53,7 @@ const Login = () => {
                 <Modal.Title>Acesso Restrito</Modal.Title>
                 </Modal.Header>
 
-                <form className='login' onSubmit={fazerLogin}>
+                <form className='login formColumn' onSubmit={fazerLogin}>
                     <span>
                         <i className="bi bi-person"></i>
                         <input type='text' onChange={inputChange} name='username' id='username' placeholder="Login" required />
