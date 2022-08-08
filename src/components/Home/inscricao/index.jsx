@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Axios from 'axios'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 import Phone from './phone'
 
 export default function Inscricao() {
@@ -60,10 +60,10 @@ export default function Inscricao() {
   return (
         <>
             <div className='justify eventTitle'>
-                <h1>MaxTeam Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>
+                <h1>Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>
             </div>
-            <div className='justify eventTitle'>
-                <h5>Leia as intruções antes de realizar sua inscrição!*</h5>
+            <div className='justify eventTitle alert alert-warning'>
+                    Inscrições:<br/>10 a 25 de agosto/2022, até às 18h.
             </div>
             <form id='form' onSubmit={submitForm} encType='multipart/form-data'>
                 <span className='full'>
@@ -116,10 +116,11 @@ export default function Inscricao() {
                 <label htmlFor='file'>Comprovante de pagamento:</label>
                 <span className='full'>
                     <i className="bi bi-file-image"></i>
-                    <input type='file' id='pagamento' multiple required />
+                        <Form.Control type="file" size="lg" id='pagamento' multiple required />
                 </span>
                 <span id='alert' className={'full alert alert-'+isAlert}></span>
                 <span>
+                
                     <Button as='input' type="submit" value='Confirmar' disabled={isButtonDisabled}/>
                 </span>
                 

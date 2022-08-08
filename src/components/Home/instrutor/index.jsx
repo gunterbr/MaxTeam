@@ -32,30 +32,20 @@ const Instrutor = () => {
                     4) Vamos receber sua inscrição e no prazo de 24h enviaremos a confirmação no telefone cadastrado.
                 </h5>
                     <br/><br/>
-                <h6>
-                    PRAZO DE INSCRIÇÃO DO EVENTO:<br/>10 a 25 de agosto/2022, às 18h.
-                </h6>
-                    <br/>
-                <h5 className='textCenter'>
-                PIX (CPF)
-                    <br/>
-                02197579258
-                    <br/>
-                BANCO DO BRASIL
-                    <br/>
-                Ag: 3783-4 | C/c: 22498-7
-                    <br/>
-                Maxuel Alencar Barros
-                </h5>
-                    <br/>
-                    <br/>
-                <h6>
-                    &copy; JosielDesign
+                <div className="alert alert-warning" role="alert">
+                    <h6 className='textCenter'>
+                    PIX (CPF)
                         <br/>
-                    FullStack Web Developer
+                    02197579258
+                        <br/><br/>
+                    BANCO DO BRASIL
                         <br/>
-                    (95) 98802-8564
-                </h6>
+                    Ag: 3783-4 | C/c: 22498-7
+                        <br/><br/>
+                    Maxuel Alencar Barros
+                    </h6>
+                </div>
+                
             </div>
         </>
     )

@@ -8,7 +8,7 @@ import '../css/index.css'
 export default function Card(props) {
   const userNow = localStorage.getItem('user')
   const [isButtonDisabled, setIsButtonDisabled] = useState(false)
-  const [isClassCheck, setClassCheck] = useState('')
+  const [isClassCheck, setClassCheck] = useState('dark')
   const [isInfo, setInfo] = useState('')
 
   const [show, setShow] = useState(false)
@@ -65,7 +65,7 @@ export default function Card(props) {
 
   return (
     <>
-      <div className={'alert alert-'+isClassCheck}>
+      <div className={'relacionar alert alert-'+isClassCheck}>
 
         <span>Candidato: <strong>{props.candidato}</strong></span>
         &nbsp;
@@ -85,7 +85,7 @@ export default function Card(props) {
 
         <div className='thisImage'>
           <span>
-            Comprovante de pagamento:
+            Comprovante R$:
             <button className="btn btn-default" onClick={handleShow}>
             <i className="bi bi-eye-fill"></i>
             </button>
@@ -107,7 +107,7 @@ export default function Card(props) {
           <Modal.Header closeButton>
             <Modal.Title>Comprovante de pagamento</Modal.Title>
           </Modal.Header>
-          <img default-src='none' src={`${BASE_URL}`+props.file} alt={props.originalname} className="img-thumbnail" width="304" height="236"></img>
+          <img default-src='none' src={props.file} alt={props.originalname} className="img-thumbnail" width="304" height="236"></img>
         </Modal>
 
         <span id={props.id} className={'alert alert-'+isInfo}></span>

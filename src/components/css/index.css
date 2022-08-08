@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+
   body {
     background-color: #F8F9F9;
+    font-family: 'Mitr', sans-serif;
+  }
+
+  .relacionar {
+    font-size: 0.8em;
+    font-family: Calibri, sans-serif;
   }
 
   #container {
@@ -14,7 +23,8 @@
     display: block;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    padding: 30px;
+    min-height: 100vh;
     min-width: 700px;
     max-width: 100%;
     overflow-y: auto;
@@ -26,7 +36,7 @@
     display: block;
     flex-direction: column;
     justify-content: center;
-    padding: 50px;
+    padding: 30px;
     min-width: 400px;
     max-width: 100%;
     overflow-y: auto;
@@ -63,7 +73,15 @@
   .acesso-restrito {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 20px;
+  }
+
+  .corpright {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8em;
+    color: #D98880;
   }
 
   .instrutor {
@@ -76,6 +94,7 @@
 
   h1 {
     color: #2C3E50;
+    font-family: 'Bowlby One SC', cursive;
   }
 
   h5 {
@@ -83,7 +102,7 @@
     color: #D98880;
   }
 
-  h2, h3, h6 {
+  h2, h3 {
     text-align: center;
     color: #F2F3F4;
   }
@@ -125,8 +144,13 @@
   }
 
   form.adminSet {
-    display: contents;
-    width: 100px;
+    display: inline-block;
+    width: 70px;
+  }
+
+  .thisImage > span > .btn, .adminSet > button {
+    transform: scale(0.8);
+    margin: 0;
   }
 
   .marginR5 {
@@ -135,6 +159,8 @@
 
   form > span {
     position: relative;
+    display: flex;
+    align-items: center;
   }
 
   form > span > i {
