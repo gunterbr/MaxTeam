@@ -8,7 +8,7 @@ import '../css/index.css'
 export default function Card(props) {
   const userNow = localStorage.getItem('user')
   const [isButtonDisabled, setIsButtonDisabled] = useState(false)
-  const [isClassCheck, setClassCheck] = useState('dark')
+  const [isClassCheck, setClassCheck] = useState('warning')
   const [isInfo, setInfo] = useState('')
 
   const [show, setShow] = useState(false)

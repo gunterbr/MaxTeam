@@ -9,6 +9,8 @@
   .relacionar {
     font-size: 0.8em;
     font-family: Calibri, sans-serif;
+    display: flow-root;
+    margin-bottom: 1rem;
   }
 
   #container {
@@ -136,11 +138,12 @@
     width: 100%;
   }
 
-  form > span.resp50 {
+  .resp50 {
     display: flex;
     justify-content: center;
     align-items: center;
     width: calc(50% - 5px);
+    float: left;
   }
 
   form.adminSet {
@@ -258,6 +261,34 @@
   
   input[type=text]:placeholder, input[type=password]:placeholder, input[type=tel]:placeholder, input[type=date]:placeholder {
     color: #cccccc;
+  }
+
+  #telefone, #whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    color: #FFF;
+    text-decoration: inherit;
+  }
+
+  #telefone {
+    background-color: #5fbae9;
+  }
+
+  #whatsapp {
+    background-color: #128C7E;
+  }
+
+  .container-social {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   /* OTHERS */  

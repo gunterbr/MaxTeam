@@ -60,7 +60,7 @@ export default function Inscricao() {
   return (
         <>
             <div className='justify eventTitle'>
-                <h1>Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>
+                <h1>Extreme Games 2022<br/>&#127947;&#127997; &#127947;&#65039;&#8205;&#9792;&#65039;</h1>*
             </div>
             <div className='justify eventTitle alert alert-warning'>
                     Inscrições:<br/>10 a 25 de agosto/2022, até às 18h.

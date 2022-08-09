@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import Card from './card'
+import '../css/index.css'
 
 const Load = () => {
   const [list, setList] = useState([])
+  const [categoria, seCategoria] = useState('')
+  const [sexo, setSexo] = useState('')
 
   const BASE_URL = 'https://maxteam-mysql.herokuapp.com/'
 
@@ -15,6 +18,7 @@ const Load = () => {
 
   return (
     <>
+
       {list.map((val) => (
         <Card
           key={val.idinscricao}

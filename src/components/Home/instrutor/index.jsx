@@ -41,8 +41,33 @@ const Instrutor = () => {
                     BANCO DO BRASIL
                         <br/>
                     Ag: 3783-4 | C/c: 22498-7
+                    </h6>
+                </div>
+                <div className="alert alert-success" role="alert">
+                    <h6 className='textCenter'>
+                    <strong>
+                    MAXTEAM EXTREME GAMES 2022
+                        <br/>
+                    CAROEBE/RORAIMA
+                    </strong>
+                    <br/>
+                    O maior evento CrossFit do Sul do Estado
                         <br/><br/>
-                    Maxuel Alencar Barros
+                    <i className="bi bi-calendar-check-fill"></i> ?? de setembro de 2022
+                    <br/>
+                    <i className="bi bi-geo-alt-fill"></i> BR 210 - Praça de Society, Centro
+                        <br/>
+                    <span className='container-social'>
+                    <a href="tel:9584057707" id='telefone' data-telegram="telefone"><i className="bi bi-telephone"></i></a>
+                    <a href="https://wa.me/?text=Gostaria%20de%20mais%20informações%20sobre%20o%20MaxTeam%20Extreme%20Games%202022"
+                    id='whatsapp' data-telegram="whatsapp">
+                        <i className="bi bi-whatsapp"></i>
+                    </a>
+                    </span>
+                        <br/><br/>
+                    Organizador:
+                    <br />
+                    <strong>MAXUEL ALENCAR BARROS</strong>
                     </h6>
                 </div>
                 
