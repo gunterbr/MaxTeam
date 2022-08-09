@@ -67,20 +67,21 @@ export default function Card(props) {
     <>
       <div className={'relacionar alert alert-'+isClassCheck}>
 
+        <span>Nº de Inscrição: <strong>{props.inscricao}</strong></span>
+        &nbsp;
+        <span>Camiseta: <strong>{props.camiseta}</strong></span>
+        <br/>
         <span>Candidato: <strong>{props.candidato}</strong></span>
         &nbsp;
-        <span>Idade: <strong>{props.idade}</strong></span>
         <br/>
-        <span>Inscrição: <strong>{props.inscricao}</strong></span>
-        &nbsp;
         <span>Evento: <strong>{props.evento}</strong></span>
         <br/>
-        <span>Camiseta: <strong>{props.camiseta}</strong></span>
+        <span>Categoria: <strong>{props.categoria}</strong></span>
         &nbsp;
         <span>Sexo: <strong>{props.sexo}</strong></span>
         &nbsp;
-        <span>Categoria: <strong>{props.categoria}</strong></span>
-        &nbsp;
+        <span>Idade: <strong>{props.idade}</strong></span>
+        <br/>
         <span>Contato: <strong>{props.contato}</strong></span>
 
         <div className='thisImage'>
