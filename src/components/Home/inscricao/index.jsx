@@ -99,7 +99,7 @@ export default function Inscricao() {
                     <i className="bi bi-gender-ambiguous"></i>
                     <select id='sexo' name='sexo' required >
                         <option value=''>Sexo:</option>
-                        <option value='P'>F</option>
+                        <option value='F'>F</option>
                         <option value='M'>M</option>
                     </select>
                 </span>
